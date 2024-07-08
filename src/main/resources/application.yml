@@ -1,0 +1,9 @@
+#application
+spring:
+  application:
+    name: homeworkEbayRest
+#netork
+server:
+  port: 8081
+  servlet:
+    context-path: /homework
