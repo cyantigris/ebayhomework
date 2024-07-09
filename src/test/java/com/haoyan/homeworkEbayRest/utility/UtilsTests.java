@@ -23,12 +23,16 @@ public class UtilsTests {
     }
     @Test
     void TestGetAccessFile(){
-        String filePath = Utils.GetAccessFile();
+        String filePath = Utils.getAccessFile();
         assertTrue(filePath.length() > 0);
     }
     @Test
     void TestGetAccessReader(){
 
-        assertTrue(Utils.GetAccessReader() != null);
+        assertTrue(Utils.getAccessReader() != null);
+    }
+    @Test
+    void TestGetUserList(){
+        assertTrue(Utils.getUserList().size() > 0);
     }
 }

@@ -20,10 +20,13 @@ public class UserController {
         if(!isAdmin(executorInfo)){
             return ResponseEnum.INVALID.getMessage();
         }
+
         JSONObject json = new JSONObject(userInfo);
+
         if(userService.addResource(json.getInt("userId"), resource)){
             return ResponseEnum.SUCCESS.getMessage();
         }
+
         return ResponseEnum.FAILURE.getMessage();
     }
 
